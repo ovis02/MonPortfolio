@@ -1,0 +1,11 @@
+/* Personnalisation de la barre de navigation */
+.custom-navbar {
+  background-color: #3867d6;
+  height: 80px;
+  border-bottom: 2px white; /* Trait de délimitation de 2px en bas */
+}
+
+.custom-logo {
+  width: 60px;
+  height: 60px;
+}
