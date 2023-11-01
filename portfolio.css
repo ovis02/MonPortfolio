@@ -14,7 +14,7 @@ p {
   font-size: 20px;
 }
 
-/* Personnalisation de la barre de navigation */
+/*Barre de navigation */
 
 .custom-navbar {
   height: 80px;
@@ -31,7 +31,7 @@ p {
 }
 /*Introduction*/
 .Introduction {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .content1 {
@@ -87,4 +87,59 @@ p {
   display: flex;
   justify-content: center;
   padding: 100px;
+}
+
+/*Contact*/
+
+.Contact {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3867d6;
+  border: 5px solid #f1c40f;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.contact-right {
+  width: 60%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  color: #f1c40f;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px; /* Pour ajouter un espace entre les boutons et le formulaire */
+}
+
+.send-button,
+.download-button {
+  width: 200px;
+  height: 60px;
+  margin: 10px;
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
