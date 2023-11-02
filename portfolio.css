@@ -36,7 +36,19 @@ p {
 
 .content1 {
   border-top: 10px solid #f1c40f;
-  border-left: 10px solid #f1c40f;
+  border-left: 20px solid #f1c40f;
+}
+
+.content1,
+.logo-container2,
+.contact-box {
+  transition: box-shadow 1s; /*temps effet de brillance au survol*/
+}
+
+.content1:hover,
+.logo-container2:hover,
+.contact-box:hover {
+  box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
 }
 
 .content1 {
@@ -51,9 +63,15 @@ p {
   font-size: 32px;
   color: #f1c40f;
 }
+/*effet au survol de la souris pour le text*/
 
 .text {
   color: white;
+  transition: transform 1s;
+}
+
+.text:hover {
+  transform: perspective(1000px) rotateY(10deg);
 }
 
 .title,
@@ -82,7 +100,7 @@ p {
 
 .logo-container2 {
   border-bottom: 10px solid #f1c40f;
-  border-right: 10px solid #f1c40f;
+  border-right: 20px solid #f1c40f;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -142,4 +160,9 @@ label {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+}
+/*footer*/
+
+footer {
+  margin-bottom: 20px;
 }
