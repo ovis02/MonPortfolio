@@ -166,3 +166,123 @@ label {
 footer {
   margin-bottom: 20px;
 }
+
+.footer img {
+  width: 80px;
+  height: 80px;
+}
+
+/*Format mobile*/
+
+@media (max-width: 767px) {
+  p {
+    font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+  }
+
+  .title {
+    font-size: 20px; /* Taille du titre réduite pour les écrans mobiles */
+  }
+
+  .text {
+    font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+  }
+
+  .logo {
+    width: max-content; /* Largeur du logo réduite pour les écrans mobiles */
+    height: 345px; /* Hauteur du logo réduite pour les écrans mobiles */
+  }
+
+  /*Introduction*/
+  .Introduction {
+    margin-bottom: 50px;
+  }
+
+  /*présentation*/
+  .profile-picture {
+    width: 150px; /* Largeur de l'image réduite pour les écrans mobiles */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+  }
+
+  /*contact + logo */
+
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-right {
+    align-items: center;
+    width: auto;
+  }
+
+  .logo2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    width: max-content;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%; /* largeur des champs formulaire*/
+    padding: 10px;
+  }
+
+  .send-button,
+  .download-button {
+    width: 100px;
+    height: 50px;
+  }
+
+  /*footer*/
+  .col-md-2.col-sm-1 {
+    width: auto;
+  }
+  .footer img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/*Page Projet*/
+
+.title projet {
+}
+
+.titre-projet {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#Projet1 {
+  border-top: 10px solid #f1c40f;
+  border-left: 20px solid #f1c40f;
+  margin-bottom: 100px;
+  padding: 20px;
+}
+
+#Projet3 {
+  border-bottom: 10px solid #f1c40f;
+  border-right: 20px solid #f1c40f;
+  margin-top: 100px;
+}
+
+#Projet1,
+#Projet2,
+#Projet3 {
+  transition: box-shadow 1s; /*temps effet de brillance au survol*/
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#Projet1:hover,
+#Projet2:hover,
+#Projet3:hover {
+  box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
+}
