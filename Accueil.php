@@ -1,4 +1,8 @@
-<?php include('header.php'); ?>
+<?php
+$accueilColor = "white";
+$projetsColor = "warning";
+include 'header.php';
+?>
 <!--Introduction-->
     <section class="Introduction">
       <div class="container">

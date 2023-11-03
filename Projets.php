@@ -1,4 +1,9 @@
-<?php include('header.php'); ?>
+<?php
+$accueilColor = "warning";
+$projetsColor = "white";
+include 'header.php';
+?>
+
 
 <!------------------------------Projets------------------------------>
     <!--titre principal des projet-->
