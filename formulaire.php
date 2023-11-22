@@ -4,43 +4,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // Effectuez une validation simple (vous pouvez ajouter des validations plus avancées)
+    // Effectuez une validation simple 
     if (empty($email) || empty($message)) {
         echo "Tous les champs sont obligatoires.";
     } else {
-        // Les données sont valides, vous pouvez effectuer d'autres opérations ici
+  
 
         // 1. Envoi du message de confirmation
         $confirmationMessage = "Merci pour votre message. Je l'ai bien reçu et il sera traité prochainement.";
 
-        // Vous pouvez envoyer ce message par e-mail en utilisant une bibliothèque de messagerie comme PHPMailer
-        // ou simplement l'afficher à l'utilisateur.
+        // 2. Enregistrement des données dans la base de données MySQL en utilisant PDO
+        try {
+            $servername = "localhost";
+            $dbname = "portfolio";
+            $username = "ovis02";
+            $password = "Zayd786.";
 
-        // 2. Enregistrement des données dans la base de données MySQL
-        $servername = "votre_serveur_mysql";
-        $username = "votre_utilisateur_mysql";
-        $password = "votre_mot_de_passe_mysql";
-        $dbname = "votre_base_de_donnees_mysql";
+            // Créez une connexion PDO
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
-        // Créez une connexion à la base de données
-        $conn = new mysqli($servername, $username, $password, $dbname);
+            // Définissez l'attribut PDO pour générer des exceptions en cas d'erreur
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Vérifiez la connexion
-        if ($conn->connect_error) {
-            die("La connexion à la base de données a échoué : " . $conn->connect_error);
-        }
+            // Préparez la requête d'insertion
+            $stmt = $conn->prepare("INSERT INTO formulaire (email, message) VALUES (:email, :message)");
 
-        // Préparez et exécutez une requête pour insérer les données dans la base de données
-        $sql = "INSERT INTO messages (email, message) VALUES ('$email', '$message')";
+            // Liez les valeurs aux paramètres
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':message', $message);
 
-        if ($conn->query($sql) === TRUE) {
+            // Exécutez la requête
+            $stmt->execute();
+
             echo $confirmationMessage;
-        } else {
-            echo "Erreur : " . $sql . "<br>" . $conn->error;
+        } catch(PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
         }
 
-        // Fermez la connexion à la base de données
-        $conn->close();
+        // Fermez la connexion PDO
+        $conn = null;
     }
 }
 ?>

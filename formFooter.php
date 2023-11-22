@@ -7,7 +7,7 @@
             <img src="monLogo.png" alt="Votre Logo" class="logo2" />
           </div>
           <div class="contact-right">
-            <form method="post" action="formulaire.php">
+            <form method="POST" action="formulaire.php">
               <div class="form-group">
                 <label for="email">Email</label>
                 <input
@@ -28,12 +28,12 @@
                   style="height: 200px"
                 ></textarea>
               </div>
+              <button class="send-button" type="submit">Envoyer</button>
             </form>
           </div>
         </div>
         <div class="button-container">
-          <button class="send-button" type="submit">Envoyer</button>
-          <p class="text">Télécharger mon CV</p>
+                    <p class="text">Télécharger mon CV</p>
           <button class="download-button">Télécharger</button>
         </div>
       </div>

@@ -28,12 +28,12 @@
         /></a>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link perso-class text-<?php echo $accueilColor; ?>" href="portfolio.html"
+            <a class="nav-link perso-class text-<?php echo $accueilColor; ?>" href="Accueil.php"
               >Accueil</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link perso-class text-<?php echo $projetsColor; ?>" href="Projets.html"
+            <a class="nav-link perso-class text-<?php echo $projetsColor; ?>" href="Projets.php"
               >Projets</a
             >
           </li>

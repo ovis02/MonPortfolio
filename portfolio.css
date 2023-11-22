@@ -18,7 +18,7 @@ p {
 
 .custom-navbar {
   height: 80px;
-  border-bottom: 2px solid white; /* Trait de délimitation de 2px en bas */
+  border-bottom: 2px solid white;
 }
 
 .custom-logo {
@@ -33,12 +33,7 @@ p {
 .Introduction {
   margin-bottom: 150px;
 }
-
-.content1 {
-  border-top: 10px solid #f1c40f;
-  border-left: 20px solid #f1c40f;
-}
-
+/*.................Effet de brillance.............*/
 .content1,
 .logo-container2,
 .contact-box {
@@ -50,13 +45,15 @@ p {
 .contact-box:hover {
   box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
 }
-
+/*.......................................*/
 .content1 {
   border-radius: 5px;
   margin-top: 30px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border-top: 10px solid #f1c40f;
+  border-left: 20px solid #f1c40f;
 }
 
 .title {
@@ -73,6 +70,7 @@ p {
 .text:hover {
   transform: perspective(1000px) rotateY(10deg);
 }
+/*.........................................*/
 
 .title,
 .text {
@@ -174,7 +172,7 @@ footer {
 
 /*Format mobile*/
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   p {
     font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
   }

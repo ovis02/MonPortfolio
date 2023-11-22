@@ -31,7 +31,7 @@ include 'header.php';
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-7">
             <div class="content2">
               <h2 class="title">1. Qui suis-je ?</h2>
               <p class="text">
@@ -48,7 +48,7 @@ include 'header.php';
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-5">
             <div class="logo-container2">
               <img
                 src="60111.jpg"
