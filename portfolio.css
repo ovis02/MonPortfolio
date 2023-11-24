@@ -29,6 +29,18 @@ p {
 .perso-class {
   font-weight: 20px;
 }
+/*............................admin......................................*/
+
+.login-form {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: white;
+  top: 10px;
+  right: 80px;
+  z-index: 100;
+}
+/*........................................................................*/
 /*Introduction*/
 .Introduction {
   margin-bottom: 150px;
@@ -136,6 +148,11 @@ form textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+/*...........message de confirmation........*/
+#confirmation {
+  color: white; /* Change la couleur du texte en blanc */
+  font-size: 20px;
 }
 
 label {

@@ -7,7 +7,7 @@
             <img src="monLogo.png" alt="Votre Logo" class="logo2" />
           </div>
           <div class="contact-right">
-            <form method="POST" action="formulaire.php">
+            <form id="myForm" method="POST" action="formulaire.php">
               <div class="form-group">
                 <label for="email">Email</label>
                 <input
@@ -27,18 +27,21 @@
                   placeholder="Saisissez votre message ici"
                   style="height: 200px"
                 ></textarea>
+                    
               </div>
               <button class="send-button" type="submit">Envoyer</button>
             </form>
           </div>
         </div>
+  
         <div class="button-container">
                     <p class="text">Télécharger mon CV</p>
           <button class="download-button">Télécharger</button>
         </div>
+         <div id="confirmation"></div>
       </div>
     </section>
-    <!--Footer-->
+    <!--Footer-->   
     <footer class="footer">
       <div class="container">
         <div class="col-12">
@@ -62,12 +65,16 @@
         </div>
       </div>
     </footer>
-
-    <script
+   
+    <script>
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
-    ></script>
+    </script>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
     <script src="portfolio.js"></script>
   </body>
 </html>
