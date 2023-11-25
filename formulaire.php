@@ -1,10 +1,10 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupération des données du formulaire
+    // Récupère des données du formulaire
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // Effectuer une validation simple 
+    // Effectue une validation simple 
     if (empty($email) || empty($message)) {
         echo "Tous les champs sont obligatoires.";
         return;
@@ -16,16 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = "root";
         $password = "";
 
-        // Création d'une connexion PDO à la base de données
+        // Crée une connexion PDO à la base de données
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        // Préparation de la requête d'insertion
-        $stmt = $conn->prepare("INSERT INTO formulaire (email, message) VALUES (:email, :message)");
+        
+        // Prépare la requête d'insertion avec la date
+        $stmt = $conn->prepare("INSERT INTO formulaire (email, message, date) VALUES (:email, :message, NOW())");
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':message', $message);
 
-        // Exécution de la requête
+        // Exécute la requête
         $stmt->execute();
 
         // Message de confirmation
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erreur : " . $e->getMessage();
     }
 
-    // Fermeture de la connexion PDO
+    // Ferme la connexion PDO
     $conn = null;
 }
 ?>

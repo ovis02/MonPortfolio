@@ -27,7 +27,7 @@
           ><img src="logoporfolio2.jpg" alt="Logo" class="custom-logo"
         /></a>
            <div class="login-form">
-    <form action="process_login.php" method="POST">
+    <form action="login.php" method="POST">
       <input type="text" name="username" placeholder="Nom d'utilisateur">
       <input type="password" name="password" placeholder="Mot de passe">
       <button type="submit">Se connecter</button>
