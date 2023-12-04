@@ -20,7 +20,7 @@ include 'header.php';
 
           <div class="col-md-6">
             <div class="logo-container">
-              <img src="monLogo.png" alt="Votre Logo" class="logo" />
+              <img src="images/monLogo.png" alt="Votre Logo" class="logo" />
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ include 'header.php';
           <div class="col-md-5">
             <div class="logo-container2">
               <img
-                src="60111.jpg"
+                src="images/60111.jpg"
                 alt="Votre Photo de Profil"
                 class="profile-picture"
               />

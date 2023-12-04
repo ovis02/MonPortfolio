@@ -24,7 +24,7 @@
     <header>
       <nav class="navbar navbar-expand custom-navbar">
         <a class="navbar-brand admin" href="#"
-          ><img src="logoporfolio2.jpg" alt="Logo" class="custom-logo"
+          ><img src="images/logoporfolio2.jpg" alt="Logo" class="custom-logo"
         /></a>
            <div class="login-form">
     <form action="login.php" method="POST">

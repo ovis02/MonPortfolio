@@ -1,9 +1,11 @@
+// Base styles
 body {
   background-color: #3867d6;
   margin: 0;
   padding: 0;
 }
 
+// Police
 .perso-class,
 .title {
   font-family: "Lexend Mega", sans-serif;
@@ -14,6 +16,7 @@ p {
   font-size: 20px;
 }
 
+// Barre de navigation
 .custom-navbar {
   height: 80px;
   border-bottom: 2px solid white;
@@ -28,6 +31,7 @@ p {
   font-weight: 20px;
 }
 
+// Admin section
 .login-form {
   display: none;
   position: absolute;
@@ -38,10 +42,12 @@ p {
   z-index: 100;
 }
 
+// Introduction
 .Introduction {
   margin-bottom: 150px;
 }
 
+// Effet de brillance
 .content1,
 .logo-container2,
 .contact-box {
@@ -54,6 +60,7 @@ p {
   box-shadow: 0 0 100px rgba(241, 196, 15, 0.7);
 }
 
+// Content1 styles
 .content1 {
   border-radius: 5px;
   margin-top: 30px;
@@ -78,6 +85,7 @@ p {
   transform: perspective(1000px) rotateY(10deg);
 }
 
+// Presentation
 .title,
 .text {
   margin-top: 30px;
@@ -95,11 +103,13 @@ p {
   z-index: -1;
 }
 
+// Profile picture
 .profile-picture {
   border-radius: 50%;
   width: 250px;
 }
 
+// Contact
 .Contact {
   text-align: center;
   padding: 40px 0;
@@ -119,6 +129,7 @@ p {
   width: 60%;
 }
 
+// Form styles
 .form-group {
   margin-bottom: 20px;
 }
@@ -131,6 +142,7 @@ form textarea {
   border-radius: 5px;
 }
 
+// Confirmation message
 #confirmation {
   color: white;
   font-size: 20px;
@@ -159,6 +171,7 @@ label {
   cursor: pointer;
 }
 
+// Footer
 footer {
   margin-bottom: 20px;
 }
@@ -168,54 +181,71 @@ footer {
   height: 80px;
 }
 
+// Mobile formatting
 @media (max-width: 768px) {
   p {
     font-size: 16px;
   }
+
   .title {
     font-size: 20px;
   }
+
   .text {
     font-size: 16px;
   }
+
   .logo {
     width: max-content;
     height: 345px;
   }
+
+  // Introduction
   .Introduction {
     margin-bottom: 50px;
   }
+
+  // Presentation for mobile
   .profile-picture {
     width: 150px;
     height: auto;
   }
+
+  // Contact + Logo for mobile
   .contact-box {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .contact-right {
     align-items: center;
     width: auto;
   }
+
   .logo2 {
     width: 150px;
     height: 150px;
   }
+
   .form-group {
     margin-bottom: 10px;
     width: max-content;
   }
+
   .form-group input,
   .form-group textarea {
     width: 100%;
     padding: 10px;
   }
+
   .send-button,
   .download-button {
     width: 100px;
     height: 50px;
   }
+
+  // Footer
   .col-md-2.col-sm-1 {
     width: auto;
   }
@@ -224,6 +254,8 @@ footer {
     height: 30px;
   }
 }
+
+// Page Projet
 .titre-projet {
   font-family: "Comfortaa", sans-serif;
   font-size: 20px;
@@ -258,6 +290,7 @@ footer {
   box-shadow: 0 0 100px rgba(241, 196, 15, 0.7);
 }
 
+// Admin page
 .titre-message {
   color: #f1c40f;
   text-align: center;
@@ -265,6 +298,7 @@ footer {
   margin-bottom: 20px;
 }
 
+// Table styles
 table {
   border-collapse: collapse;
   width: 80%;
@@ -288,5 +322,3 @@ th {
 td {
   color: #f1c40f;
 }
-
-/*# sourceMappingURL=portfolio.css.map */

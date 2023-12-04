@@ -27,17 +27,14 @@ $(document).ready(function () {
 
 //Formulaire administrateur
 
-const adminLink = document.querySelector(".admin");
-const loginForm = document.querySelector(".login-form");
-
-if (adminLink && loginForm) {
-  adminLink.addEventListener("click", function (event) {
+$(document).ready(function () {
+  $(".admin").on("click", function (event) {
     event.preventDefault();
 
-    if (loginForm.style.display === "block") {
-      loginForm.style.display = "none"; // Cache le formulaire s'il est déjà affiché
+    if ($(".login-form").css("display") === "block") {
+      $(".login-form").css("display", "none"); // Cache le formulaire s'il est déjà affiché
     } else {
-      loginForm.style.display = "block"; // Affiche le formulaire s'il est caché
+      $(".login-form").css("display", "block"); // Affiche le formulaire s'il est caché
     }
   });
-}
+});
