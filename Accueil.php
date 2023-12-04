@@ -3,6 +3,7 @@ $accueilColor = "white";
 $projetsColor = "warning";
 include 'header.php';
 ?>
+    <canvas id="canvas"></canvas>
 <!--Introduction-->
     <section class="Introduction">
       <div class="container">
