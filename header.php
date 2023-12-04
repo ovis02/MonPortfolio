@@ -33,7 +33,7 @@
   </div>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link perso-class text-<?php echo $accueilColor; ?>" href="Accueil.php"
+            <a class="nav-link perso-class text-<?php echo $accueilColor; ?>" href="index.php"
               >Accueil</a
             >
           </li>
