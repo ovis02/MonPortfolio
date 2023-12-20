@@ -18,11 +18,11 @@
         </thead>
         <tbody id="recup">
             <?php
-            $servername = "localhost";
-            $dbname = "portfolio";
-            $username = "root";
-            $password = "";
-
+ $host = "ltnya0pnki2ck9w8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+$username = "ufmtrdqqw5rnyyih";
+$password = "s6ovwutglzlers1f";
+$database = "cd9qjh84w06noeth";
+$port = 3306;
             try {
                 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

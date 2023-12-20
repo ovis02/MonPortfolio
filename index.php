@@ -3,7 +3,7 @@ $accueilColor = "white";
 $projetsColor = "warning";
 include 'header.php';
 ?>
-    <canvas id="canvas"></canvas>
+
 <!--Introduction-->
     <section class="Introduction">
       <div class="container">
@@ -52,7 +52,7 @@ include 'header.php';
           <div class="col-md-5">
             <div class="logo-container2">
               <img
-                src="images/60111.jpg"
+                src="images/idpicture1.png"
                 alt="Votre Photo de Profil"
                 class="profile-picture"
               />

@@ -8,7 +8,7 @@ include 'header.php';
 <!------------------------------Projets------------------------------>
     <!--titre principal des projet-->
     <div class="container text-center mb-3">
-      <h1 class="title">2.Mes projets</h1>
+      <h1 class="title" id="titre-principale">2.Mes projets</h1>
     </div>
 
     <!--Projet1-->
