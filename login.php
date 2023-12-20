@@ -2,14 +2,15 @@
 session_start();
 
 // Paramètres de connexion à la base de données
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "portfolio";
+$host = "ltnya0pnki2ck9w8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+$username = "ufmtrdqqw5rnyyih";
+$password = "s6ovwutglzlers1f";
+$database = "cd9qjh84w06noeth";
+$port = 3306;
 
 try {
     // Connexion à la base de données
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$host;port=$port;dbname=$database", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Vérifie si les données POST existent et ne sont pas vides

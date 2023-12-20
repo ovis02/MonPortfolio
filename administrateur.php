@@ -24,7 +24,7 @@ $password = "s6ovwutglzlers1f";
 $database = "cd9qjh84w06noeth";
 $port = 3306;
             try {
-                $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                $conn = new PDO("mysql:host=$host;port=$port;dbname=$database", $username, $password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 $stmt = $conn->query("SELECT id, email, message, date FROM formulaire");
