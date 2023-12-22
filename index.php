@@ -52,7 +52,7 @@ include 'header.php';
           <div class="col-md-5">
             <div class="logo-container2">
               <img
-                src="images/idpicture1.png"
+                src="images/Image1.png"
                 alt="Votre Photo de Profil"
                 class="profile-picture"
               />
