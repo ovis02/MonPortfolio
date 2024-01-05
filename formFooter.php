@@ -36,7 +36,7 @@
   
         <div class="button-container">
                     <p class="text">Télécharger mon CV</p>
-                     <a href="cv/Aowis_MOHAMMAD_cv final.pdf">
+                     <a href="cv/Aowis_MOHAMMAD_cv finalisé.pdf">
           <button class="download-button">Télécharger</button>
           </a>
         </div>
