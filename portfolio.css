@@ -1,11 +1,24 @@
 body {
+  cursor: url("images/mouse.png") 0 0, auto;
   background-color: #3867d6;
   margin: 0;
   padding: 0;
 }
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
 /*Police*/
 .perso-class,
-.title {
+.title,
+.perso-title {
   font-family: "Lexend Mega", sans-serif;
 }
 
@@ -16,18 +29,189 @@ p {
 
 /*Barre de navigation */
 
+.header-3d {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(56, 103, 214, 1),
+    rgba(85, 58, 223, 0.8),
+    rgba(56, 103, 214, 1)
+  );
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: none;
+}
+
+/* Barre de navigation */
 .custom-navbar {
   height: 80px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: fixed; /* Fixe la barre de navigation en haut */
+  width: 100%; /* S'assure qu'elle prend toute la largeur */
+  top: 0;
+  z-index: 2; /* Doit être supérieur à l'effet 3D */
 }
 
 .custom-logo {
   width: 60px;
   height: 60px;
+  transform: rotate(360deg);
+  transition: transform 1s ease;
+  margin-left: 10px;
 }
 
+.custom-logo:hover {
+  transform: rotate(0deg);
+}
+
+/* Logo burger (masqué sur grand écran) */
+.burger-menu {
+  display: none; /* Caché par défaut */
+}
+/* Style pour la barre de navigation latérale */
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(56, 103, 214, 0.95); /* Fond semi-transparent */
+  overflow-x: hidden;
+  transition: 0.5s; /* Animation douce lors de l'ouverture */
+  z-index: 9999;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 20px;
+}
+
+.side-nav ul li {
+  margin: 20px 0;
+}
+
+.side-nav ul li a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Arial", sans-serif; /* La même police */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.side-nav ul li a:hover {
+  color: #ffd700; /* Jaune doré au survol */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Ouverture de la barre */
+.side-nav.open {
+  width: 250px;
+}
 .perso-class {
-  font-weight: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.text-gold,
+.perso-subtitle {
+  color: #ffd700; /* Couleur active pour la page actuelle */
+}
+
+.text-white {
+  color: white;
+}
+
+.perso-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.perso-title {
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+  text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.perso-subtitle {
+  font-size: 24px;
+  margin-top: 20px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(200);
+  }
+}
+
+/* Effet de réaction */
+.header-3d::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  ); /* Éclaircissement */
+  filter: blur(10px);
+  animation: pulse 2s infinite; /* Animation de pulsation */
+  z-index: 0; /* Doit être derrière le contenu */
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8; /* Éclaircissement au milieu de l'animation */
+  }
+}
+/*titre*/
+.hero-title,
+.hero-subtitle {
+  transform: translateZ(60px);
+  perspective: 1000px;
+  transition: transform 0.6s ease;
+}
+
+.hero-title:hover,
+.hero-subtitle:hover {
+  transform: translateZ(80px);
 }
 /*............................admin......................................*/
 
@@ -40,11 +224,7 @@ p {
   right: 80px;
   z-index: 100;
 }
-/*........................................................................*/
-/*Introduction*/
-.Introduction {
-  margin-bottom: 150px;
-}
+
 /*.................Effet de brillance.............*/
 .content1,
 .profile-picture,
@@ -58,9 +238,20 @@ p {
   box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
 }
 /*.......................................*/
+.Introduction,
+.Main,
+.technologies,
+.Contact{
+ background: linear-gradient(
+    to bottom,
+    rgba(56, 103, 214, 1),
+    rgba(85, 58, 223, 0.8),
+    rgba(56, 103, 214, 1)
+  );
+}
+
 .content1 {
   border-radius: 5px;
-  margin-top: 30px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -98,7 +289,6 @@ p {
 .logo {
   width: fit-content;
   height: 600px;
-  z-index: -1;
   transition: transform 5s ease; /* Animation de transition */
 }
 
@@ -120,6 +310,29 @@ p {
   display: flex;
   justify-content: center;
   padding: 100px;
+}
+
+/* Technologies */
+.technologies {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-icons img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.1);
 }
 
 /*Contact*/
@@ -181,162 +394,325 @@ label {
   color: #fff;
   cursor: pointer;
 }
-/*footer*/
+/* Footer Styling */
+.footer {
+  background: linear-gradient(
+    to bottom,
+    rgba(56, 103, 214, 1),
+    rgba(85, 58, 223, 0.8)
+  );
+  color: white;
+  padding: 40px 0;
+  position: relative;
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+}
 
-footer {
+.footer h3 {
+  color: #f1c40f;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #bbb;
+  font-size: 16px;
+}
+
+.footer a {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Section sur moi */
+.footer-about p {
+  max-width: 350px;
   margin-bottom: 20px;
 }
 
-.footer img {
-  width: 80px;
-  height: 80px;
+/* Réseaux sociaux */
+.footer-social .social-icon {
+  display: inline-block;
+  margin: 10px;
+}
+
+.footer-social img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.footer-social img:hover {
+  transform: scale(1.2) translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+/* Contact rapide */
+.footer-contact {
+  text-align: right;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+  color: #aaa;
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-bottom p a {
+  color: #f1c40f;
+}
+
+.footer-bottom p a:hover {
+  color: #fff;
+}
+
+/* Animation d'apparition en fondu */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-content {
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /*Format mobile*/
 
 @media (max-width: 768px) {
-  p {
-    font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+  body {
+    cursor: url("images/mouse_mobile.png"), auto;
+
+    /* Masquer la barre de navigation classique */
+  }
+    .custom-link {
+      display: none;
+    }
+
+    /* Afficher le logo burger */
+    .burger-menu {
+      display: block; /* Le logo burger s'affiche sur mobile */
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      z-index: 10;
+    }
+.burger-menu img {
+  height: 60px; /* Assure que les deux logos ont la même hauteur */
+  width: auto;
+  margin: 0; /* Supprimer les marges par défaut */
+}
+    /* Style de la barre latérale visible sur mobile */
+    .side-nav {
+      display: block;
+    }
+
+    .side-nav ul {
+      padding: 50px 20px;
+    }
+
+    .side-nav ul li {
+      margin: 20px 0;
+    }
+
+    .side-nav ul li a {
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Bouton de fermeture */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 36px;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+    /* Ouverture de la barre */
+.side-nav.open {
+  width: 250px;
+   }
+
+    p {
+      font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+    }
+    .perso-title {
+      font-size: 30px;
+    }
+    .title {
+      font-size: 20px; /* Taille du titre réduite pour les écrans mobiles */
+    }
+
+    .text,
+    .perso-class {
+      font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+    }
+
+    .logo {
+      width: max-content; /* Largeur du logo réduite pour les écrans mobiles */
+      height: 345px; /* Hauteur du logo réduite pour les écrans mobiles */
+    }
+
+    /*Introduction*/
+    .Introduction {
+      margin-bottom: 50px;
+    }
+
+    /*présentation*/
+    .profile-picture {
+      width: 150px; /* Largeur de l'image réduite pour les écrans mobiles */
+      height: auto; /* Hauteur automatique pour maintenir les proportions */
+    }
+
+    /*contact + logo */
+
+    .contact-box {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-right {
+      align-items: center;
+      width: auto;
+    }
+
+    .logo2 {
+      width: 150px;
+      height: 150px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+      width: max-content;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%; /* largeur des champs formulaire*/
+      padding: 10px;
+    }
+
+    .send-button,
+    .download-button {
+      width: 100px;
+      height: 50px;
+    }
+
+    .footer-contact {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer-about,
+    .footer-social,
+    .footer-contact {
+      margin-bottom: 20px;
+    }
+
+    .footer-social img {
+      width: 30px;
+      height: 30px;
+    }
   }
 
-  .title {
-    font-size: 20px; /* Taille du titre réduite pour les écrans mobiles */
+  /*Page Projet*/
+  #titre-principale {
+    margin-bottom: 50px; /* Ajoute une marge en bas de 20 pixels */
   }
 
-  .text {
-    font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+  .titre-projet {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
   }
 
-  .logo {
-    width: max-content; /* Largeur du logo réduite pour les écrans mobiles */
-    height: 345px; /* Hauteur du logo réduite pour les écrans mobiles */
+  #Projet1 {
+    border-top: 10px solid #f1c40f;
+    border-left: 20px solid #f1c40f;
+    margin-bottom: 100px;
+    padding: 20px;
   }
 
-  /*Introduction*/
-  .Introduction {
-    margin-bottom: 50px;
+  #Projet3 {
+    border-bottom: 10px solid #f1c40f;
+    border-right: 20px solid #f1c40f;
+    margin-top: 100px;
   }
 
-  /*présentation*/
-  .profile-picture {
-    width: 150px; /* Largeur de l'image réduite pour les écrans mobiles */
-    height: auto; /* Hauteur automatique pour maintenir les proportions */
+  #Projet1,
+  #Projet2,
+  #Projet3 {
+    transition: box-shadow 1s; /*temps effet de brillance au survol*/
+    padding: 20px;
+    border-radius: 5px;
   }
 
-  /*contact + logo */
-
-  .contact-box {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  #Projet1:hover,
+  #Projet2:hover,
+  #Projet3:hover {
+    box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
   }
 
-  .contact-right {
-    align-items: center;
-    width: auto;
+  /*.....................page admin.............................*/
+  /* ...............Styles pour le titre...................... */
+  .titre-message {
+    color: #f1c40f;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 
-  .logo2 {
-    width: 150px;
-    height: 150px;
+  /*...............Styles pour la table...................... */
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 5px solid #f1c40f;
   }
 
-  .form-group {
-    margin-bottom: 10px;
-    width: max-content;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    width: 100%; /* largeur des champs formulaire*/
+  th,
+  td {
+    border: 1px solid #f1c40f;
     padding: 10px;
+    text-align: center;
   }
 
-  .send-button,
-  .download-button {
-    width: 100px;
-    height: 50px;
+  th {
+    background-color: #f1c40f;
+    color: white;
   }
 
-  /*footer*/
-  .col-md-2.col-sm-1 {
-    width: auto;
+  td {
+    color: #f1c40f;
   }
-  .footer img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/*Page Projet*/
-#titre-principale {
-  margin-bottom: 50px; /* Ajoute une marge en bas de 20 pixels */
-}
-
-.titre-projet {
-  font-family: "Comfortaa", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-}
-
-#Projet1 {
-  border-top: 10px solid #f1c40f;
-  border-left: 20px solid #f1c40f;
-  margin-bottom: 100px;
-  padding: 20px;
-}
-
-#Projet3 {
-  border-bottom: 10px solid #f1c40f;
-  border-right: 20px solid #f1c40f;
-  margin-top: 100px;
-}
-
-#Projet1,
-#Projet2,
-#Projet3 {
-  transition: box-shadow 1s; /*temps effet de brillance au survol*/
-  padding: 20px;
-  border-radius: 5px;
-}
-
-#Projet1:hover,
-#Projet2:hover,
-#Projet3:hover {
-  box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
-}
-
-/*.....................page admin.............................*/
-/* ...............Styles pour le titre...................... */
-.titre-message {
-  color: #f1c40f;
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-/*...............Styles pour la table...................... */
-table {
-  border-collapse: collapse;
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-  border: 5px solid #f1c40f;
-}
-
-th,
-td {
-  border: 1px solid #f1c40f;
-  padding: 10px;
-  text-align: center;
-}
-
-th {
-  background-color: #f1c40f;
-  color: white;
-}
-
-td {
-  color: #f1c40f;
 }

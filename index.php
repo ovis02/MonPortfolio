@@ -1,9 +1,11 @@
 <?php
 $accueilColor = "white";
 $projetsColor = "warning";
+$aProposColor = "warning";
+$contactColor = "warning";
 include 'header.php';
 ?>
-
+<canvas id="canvas"> </canvas>
 <!--Introduction-->
     <section class="Introduction">
       <div class="container">
@@ -21,7 +23,7 @@ include 'header.php';
 
           <div class="col-md-6">
             <div class="logo-container">
-              <img src="images/monLogo.png" alt="Votre Logo" class="logo" />
+              <img src="images/logo.png" alt="Votre Logo" class="logo" />
             </div>
           </div>
         </div>
@@ -29,7 +31,7 @@ include 'header.php';
     </section>
 
     <!--Présentation-->
-    <section>
+    <section class="Main">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
@@ -52,7 +54,7 @@ include 'header.php';
           <div class="col-md-5">
             <div class="logo-container2">
               <img
-                src="images/Image1.png"
+                src="images/Image2.png"
                 alt="Votre Photo de Profil"
                 class="profile-picture"
               />
@@ -61,4 +63,19 @@ include 'header.php';
         </div>
       </div>
     </section>
-     <?php include('formFooter.php'); ?>
+    <!-- Technologies -->
+<section class="technologies">
+  <div class="container">
+    <h2 class="title">Technologies</h2>
+    <div class="tech-icons">
+      <img src="images/html.png" alt="HTML" />
+      <img src="images/css.png" alt="CSS" />
+      <img src="images/js.png" alt="JavaScript" />
+      <img src="images/php.png" alt="PHP" />
+      <img src="images/nodejs.png" alt="Node.js" />
+      <img src="images/bootstrap.png" alt="Bootstrap" />
+      <!-- Ajoute d'autres logos ici -->
+    </div>
+  </div>
+</section>
+     <?php include 'formFooter.php'; ?>

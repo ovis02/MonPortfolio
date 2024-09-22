@@ -19,29 +19,50 @@
     <link rel="stylesheet" href="portfolio.css" />
   </head>
   <body>
-    <header>
+   <header class="header-3d">
       <nav class="navbar navbar-expand custom-navbar">
-        <a class="navbar-brand admin" href="#"
-          ><img src="images/logoporfolio2.jpg" alt="Logo" class="custom-logo"
-        /></a>
-           <div class="login-form">
-    <form action="login.php" method="POST">
-      <input type="text" name="username" placeholder="Nom d'utilisateur">
-      <input type="password" name="password" placeholder="Mot de passe">
-      <button type="submit">Se connecter</button>
-    </form>
-  </div>
-        <ul class="navbar-nav ml-auto">
+        <a class="navbar-brand admin" href="#">
+          <img src="images/maison.png" alt="Logo" class="custom-logo" />
+        </a>
+         
+        <div class="login-form">
+          <form action="login.php" method="POST">
+            <input type="text" name="username" placeholder="Nom d'utilisateur">
+            <input type="password" name="password" placeholder="Mot de passe">
+            <button type="submit">Se connecter</button>
+          </form>
+        </div>
+        <ul class="navbar-nav ml-auto custom-link">
           <li class="nav-item">
-            <a class="nav-link perso-class text-<?php echo $accueilColor; ?>" href="index.php"
-              >Accueil</a
-            >
+            <a class="nav-link perso-class text-<?php echo $accueilColor; ?>" href="index.php">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link perso-class text-<?php echo $projetsColor; ?>" href="Projets.php"
-              >Projets</a
-            >
+            <a class="nav-link perso-class text-<?php echo $projetsColor; ?>" href="Projets.php">Projets</a>
           </li>
-        </ul>
+        
+        <li class="nav-item">
+    <a class="nav-link perso-class text-<?php echo $aProposColor; ?>" href="#">À propos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link perso-class text-<?php echo $contactColor; ?>" href="#formulaire">Contact</a>
+  </li>
+  </ul>
+       <a class="burger-menu">
+      <img src="images/burger.png" alt="Menu" id="burger-menu"/>
+    </a>
       </nav>
+      <div class="perso-content">
+        <h1 class="perso-title">Bienvenue dans Mon Portfolio</h1>
+        <p class="perso-subtitle">Découvrez mon parcours</p>
+      </div>
+      <!-- Barre de navigation latérale -->
+  <div class="side-nav" id="side-nav">
+    <a href="#" class="close-btn" id="close-btn">&times;</a>
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Projets</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
     </header>

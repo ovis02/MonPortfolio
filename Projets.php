@@ -1,6 +1,8 @@
 <?php
 $accueilColor = "warning";
 $projetsColor = "white";
+$aProposColor = "warning";
+$contactColor = "warning";
 include 'header.php';
 ?>
 
