@@ -44,17 +44,13 @@
     <a class="nav-link perso-class text-<?php echo $aProposColor; ?>" href="#">À propos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link perso-class text-<?php echo $contactColor; ?>" href="#formulaire">Contact</a>
+    <a class="nav-link perso-class text-<?php echo $contactColor; ?>" href="contact.php">Contact</a>
   </li>
   </ul>
        <a class="burger-menu">
       <img src="images/burger.png" alt="Menu" id="burger-menu"/>
     </a>
       </nav>
-      <div class="perso-content">
-        <h1 class="perso-title">Bienvenue dans Mon Portfolio</h1>
-        <p class="perso-subtitle">Découvrez mon parcours</p>
-      </div>
       <!-- Barre de navigation latérale -->
   <div class="side-nav" id="side-nav">
     <a href="#" class="close-btn" id="close-btn">&times;</a>

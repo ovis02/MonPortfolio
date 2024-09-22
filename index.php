@@ -8,6 +8,10 @@ include 'header.php';
 <canvas id="canvas"> </canvas>
 <!--Introduction-->
     <section class="Introduction">
+      <div class="perso-content">
+        <h1 class="perso-title">Développeur de demain,<br> je suis Mohammad Aowis</h1>
+        <p class="perso-subtitle">Web Developer</p>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -78,4 +82,4 @@ include 'header.php';
     </div>
   </div>
 </section>
-     <?php include 'formFooter.php'; ?>
+     <?php include 'Footer.php'; ?>

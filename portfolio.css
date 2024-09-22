@@ -27,22 +27,9 @@ p {
   font-size: 20px;
 }
 
-/*Barre de navigation */
 
-.header-3d {
-  position: relative;
-  height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    rgba(56, 103, 214, 1),
-    rgba(85, 58, 223, 0.8),
-    rgba(56, 103, 214, 1)
-  );
-  color: white;
-  text-align: center;
-  overflow: hidden;
-  border-bottom: none;
-}
+
+
 
 /* Barre de navigation */
 .custom-navbar {
@@ -137,43 +124,38 @@ p {
 .text-white {
   color: white;
 }
-
+.Introduction {
+  position: relative;
+}
 .perso-content {
-  position: absolute;
+  position: relative;
+  margin-top: 250px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 10;
+   text-align: center;
 }
 
 .perso-title {
-  font-size: 60px;
+    font-size: 60px;
+  z-index: 2; 
   letter-spacing: 3px;
-  text-transform: uppercase;
   margin: 0;
   animation: fadeIn 2s ease-in-out;
   text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
+    color: white;
+ 
 }
+
 
 .perso-subtitle {
   font-size: 24px;
   margin-top: 20px;
-  animation: fadeIn 2.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(200);
-  }
-}
-
-/* Effet de réaction */
-.header-3d::before {
+ 
+.perso-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -184,10 +166,10 @@ p {
     circle,
     rgba(255, 255, 255, 0.3) 0%,
     transparent 70%
-  ); /* Éclaircissement */
+  ); 
   filter: blur(10px);
-  animation: pulse 2s infinite; /* Animation de pulsation */
-  z-index: 0; /* Doit être derrière le contenu */
+  animation: pulse 2s infinite; 
+  z-index: 0; 
 }
 
 @keyframes pulse {
@@ -197,22 +179,11 @@ p {
     opacity: 0.5;
   }
   50% {
-    transform: scale(1.1);
-    opacity: 0.8; /* Éclaircissement au milieu de l'animation */
+    transform: scale(1);
+    opacity: 0.8; 
   }
 }
-/*titre*/
-.hero-title,
-.hero-subtitle {
-  transform: translateZ(60px);
-  perspective: 1000px;
-  transition: transform 0.6s ease;
-}
 
-.hero-title:hover,
-.hero-subtitle:hover {
-  transform: translateZ(80px);
-}
 /*............................admin......................................*/
 
 .login-form {
@@ -338,6 +309,7 @@ p {
 /*Contact*/
 
 .Contact {
+  margin-top: 100px;
   text-align: center;
   padding: 40px 0;
 }
@@ -376,11 +348,12 @@ form textarea {
 label {
   color: #f1c40f;
 }
+
 .button-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 20px; /* Pour ajouter un espace entre les boutons et le formulaire */
+  margin-top: 20px; /* Espace entre les boutons et le formulaire */
 }
 
 .send-button,
@@ -388,11 +361,40 @@ label {
   width: 200px;
   height: 60px;
   margin: 10px;
-  background-color: #f1c40f;
+  background-color: #f1c40f; /* Couleur de base */
   border: none;
-  border-radius: 5px;
+  border-radius: 10px; /* Coins plus arrondis */
   color: #fff;
   cursor: pointer;
+  position: relative; /* Nécessaire pour l'effet */
+  overflow: hidden; /* Évite que l'ombre déborde */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+}
+
+.send-button::before,
+.download-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+  z-index: 0; /* Positionné derrière le texte */
+  transform: translate(-50%, -50%) scale(0); /* Initialement invisible */
+}
+
+.send-button:hover::before,
+.download-button:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Apparition au survol */
+}
+
+.send-button:hover,
+.download-button:hover {
+  transform: scale(1.05); /* Légère augmentation de taille au survol */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre portée plus forte */
 }
 /* Footer Styling */
 .footer {
@@ -566,7 +568,9 @@ label {
     .perso-title {
       font-size: 30px;
     }
-    .title {
+
+    .title,
+    .perso-subtitle {
       font-size: 20px; /* Taille du titre réduite pour les écrans mobiles */
     }
 

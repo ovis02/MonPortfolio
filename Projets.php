@@ -82,4 +82,4 @@ include 'header.php';
         </div>
       </div>
     </section>
-        <?php include('formFooter.php'); ?>
+        <?php include 'Footer.php'; ?>
