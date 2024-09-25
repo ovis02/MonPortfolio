@@ -56,10 +56,10 @@
   <div class="side-nav" id="side-nav">
     <a href="#" class="close-btn" id="close-btn">&times;</a>
     <ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">Projets</a></li>
-      <li><a href="#">À propos</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.php">Accueil</a></li>
+      <li><a href="Projets.php">Projets</a></li>
+      <li><a href="apropos.php">À propos</a></li>
+      <li><a href="contact.php">Contact</a></li>
     </ul>
   </div>
     </header>
