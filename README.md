@@ -1,4 +1,4 @@
-Ce projet est un portfolio personnel créé pour me présenter et mettre en valeur mes projets en développement web. Il contient une introduction, une section "Qui suis-je ?", et une présentation des technologies que j'utilise.
+Ce projet est un portfolio personnel créé pour me présenter et mettre en valeur mes projets en développement web.
 
 ## Technologies Utilisées
 

@@ -34,8 +34,8 @@ p {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  position: fixed; /* Fixe la barre de navigation en haut */
-  width: 100%; /* S'assure qu'elle prend toute la largeur */
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 2; /* Doit être supérieur à l'effet 3D */
 }
@@ -63,9 +63,9 @@ p {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(56, 103, 214, 0.95); /* Fond semi-transparent */
+  background-color: rgba(56, 103, 214, 0.95);
   overflow-x: hidden;
-  transition: 0.5s; /* Animation douce lors de l'ouverture */
+  transition: 0.5s;
   z-index: 9999;
 }
 
@@ -83,13 +83,13 @@ p {
   color: white;
   font-size: 24px;
   text-decoration: none;
-  font-family: "Arial", sans-serif; /* La même police */
+  font-family: "Arial", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .side-nav ul li a:hover {
-  color: #ffd700; /* Jaune doré au survol */
+  color: #ffd700;
 }
 
 .close-btn {
@@ -115,7 +115,7 @@ p {
 
 .text-gold,
 .perso-subtitle {
-  color: #ffd700; /* Couleur active pour la page actuelle */
+  color: #ffd700;
 }
 
 .text-white {
@@ -142,8 +142,7 @@ p {
   margin: 0;
   color: white;
   text-shadow: 5px 5px 30px rgba(0, 0, 0, 0.9),
-    /* Ombre principale sombre */ 10px 10px 40px rgba(0, 0, 0, 0.7),
-    /* Ombre secondaire */ 0 0 15px rgba(255, 255, 255, 0.5); /* Léger halo lumineux */
+    10px 10px 40px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .perso-subtitle {
@@ -196,13 +195,13 @@ p {
 .content1,
 .profile-picture,
 .contact-box {
-  transition: box-shadow 1s; /*temps effet de brillance au survol*/
+  transition: box-shadow 1s;
 }
 
 .content1:hover,
 .profile-picture:hover,
 .contact-box:hover {
-  box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
+  box-shadow: 0 0 100px rgba(241, 196, 15, 0.7);
 }
 /*.......................................*/
 .Introduction,
@@ -343,7 +342,7 @@ form textarea {
 }
 /*...........message de confirmation........*/
 #confirmation {
-  color: white; /* Change la couleur du texte en blanc */
+  color: white;
   font-size: 20px;
 }
 
@@ -590,9 +589,9 @@ label {
     z-index: 10;
   }
   .burger-menu img {
-    height: 60px; /* Assure que les deux logos ont la même hauteur */
+    height: 60px;
     width: auto;
-    margin: 0; /* Supprimer les marges par défaut */
+    margin: 0;
   }
   /* Style de la barre latérale visible sur mobile */
   .side-nav {
@@ -644,17 +643,17 @@ label {
   .perso-subtitle,
   .title-form,
   .a-propos-description {
-    font-size: 20px; /* Taille du titre réduite pour les écrans mobiles */
+    font-size: 20px;
   }
 
   .text,
   .perso-class {
-    font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+    font-size: 16px;
   }
 
   .logo {
-    width: max-content; /* Largeur du logo réduite pour les écrans mobiles */
-    height: 345px; /* Hauteur du logo réduite pour les écrans mobiles */
+    width: max-content;
+    height: 345px;
   }
 
   /*Introduction*/
@@ -664,8 +663,8 @@ label {
 
   /*présentation*/
   .profile-picture {
-    width: 150px; /* Largeur de l'image réduite pour les écrans mobiles */
-    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    width: 150px;
+    height: auto;
   }
 
   /*contact + logo */
@@ -725,7 +724,7 @@ label {
 /*Page Projet*/
 #titre-principale {
   margin-top: 200px;
-  margin-bottom: 50px; /* Ajoute une marge en bas de 20 pixels */
+  margin-bottom: 50px;
 }
 
 .titre-projet {
@@ -738,12 +737,12 @@ label {
 /*liens heroku et github*/
 .gold-link {
   color: gold;
-  text-decoration: none; /* Pour enlever le soulignement par défaut */
+  text-decoration: none;
 }
 
 .gold-link:hover {
-  color: darkgoldenrod; /* Couleur lors du survol */
-  text-decoration: underline; /* Ajouter un soulignement lors du survol */
+  color: darkgoldenrod;
+  text-decoration: underline;
 }
 #Projet1 {
   border-top: 10px solid #f1c40f;
@@ -759,10 +758,10 @@ label {
 
 .blogAuto,
 .nurse {
-  max-width: 100%; /* Limite la largeur de l'image à 100% de la colonne */
-  height: auto; /* Assure que l'image garde ses proportions */
-  display: block; /* Supprime tout espace blanc ajouté par l'élément img */
-  margin: 0 auto; /* Centre l'image horizontalement si nécessaire */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 #Projet3 {
@@ -775,7 +774,7 @@ label {
 #Projet1,
 #Projet2,
 #Projet3 {
-  transition: box-shadow 1s; /*temps effet de brillance au survol*/
+  transition: box-shadow 1s;
   padding: 20px;
   border-radius: 5px;
 }
@@ -783,7 +782,7 @@ label {
 #Projet1:hover,
 #Projet2:hover,
 #Projet3:hover {
-  box-shadow: 0 0 100px rgba(241, 196, 15, 0.7); /* Ajout de  l'effet de brillance  */
+  box-shadow: 0 0 100px rgba(241, 196, 15, 0.7);
 }
 
 /*.....................page admin.............................*/

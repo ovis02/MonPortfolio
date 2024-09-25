@@ -27,7 +27,7 @@
             </a>
           </div>
           <div class="col social-icon">
-            <a href="https://www.linkedin.com/in/ovis-m-45763328a/" target="_blank">
+            <a href="https://www.linkedin.com/in/aowis-mohammad-45763328a/" target="_blank">
               <img src="images/linkedin.png" alt="LinkedIn Logo" />
             </a>
           </div>
