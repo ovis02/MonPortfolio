@@ -9,7 +9,7 @@ include 'header.php';
 <!--Introduction-->
     <section class="Introduction">
       <div class="perso-content">
-        <h1 class="perso-title">Développeur de demain,<br> je suis Mohammad Aowis</h1>
+        <h1 class="perso-title">Salut,<br> je suis Mohammad Aowis</h1>
         <p class="perso-subtitle">Web Developer</p>
       </div>
       <div class="container">

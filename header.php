@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Lexend+Mega&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css" />
   </head>
   <body>

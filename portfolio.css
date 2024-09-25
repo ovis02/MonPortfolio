@@ -27,10 +27,6 @@ p {
   font-size: 20px;
 }
 
-
-
-
-
 /* Barre de navigation */
 .custom-navbar {
   height: 80px;
@@ -134,27 +130,26 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-   text-align: center;
+  text-align: center;
 }
 
 .perso-title {
-    font-size: 60px;
-  z-index: 2; 
-  letter-spacing: 3px;
+  font-family: "Squada One", sans-serif;
+  font-size: 70px;
+  z-index: 2;
+  letter-spacing: 4px;
   margin: 0;
-  animation: fadeIn 2s ease-in-out;
-  text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
-    color: white;
- 
+  color: white;
+  text-shadow: 5px 5px 30px rgba(0, 0, 0, 0.9),
+    /* Ombre principale sombre */ 10px 10px 40px rgba(0, 0, 0, 0.7),
+    /* Ombre secondaire */ 0 0 15px rgba(255, 255, 255, 0.5); /* Léger halo lumineux */
 }
-
 
 .perso-subtitle {
   font-size: 24px;
   margin-top: 20px;
 }
 
- 
 .perso-content::before {
   content: "";
   position: absolute;
@@ -166,10 +161,10 @@ p {
     circle,
     rgba(255, 255, 255, 0.3) 0%,
     transparent 70%
-  ); 
+  );
   filter: blur(10px);
-  animation: pulse 2s infinite; 
-  z-index: 0; 
+  animation: pulse 2s infinite;
+  z-index: 0;
 }
 
 @keyframes pulse {
@@ -180,7 +175,7 @@ p {
   }
   50% {
     transform: scale(1);
-    opacity: 0.8; 
+    opacity: 0.8;
   }
 }
 
@@ -212,8 +207,8 @@ p {
 .Introduction,
 .Main,
 .technologies,
-.Contact{
- background: linear-gradient(
+.Contact {
+  background: linear-gradient(
     to bottom,
     rgba(56, 103, 214, 1),
     rgba(85, 58, 223, 0.8),
@@ -373,7 +368,7 @@ label {
 
 .send-button::before,
 .download-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -509,162 +504,186 @@ label {
 
     /* Masquer la barre de navigation classique */
   }
-    .custom-link {
-      display: none;
-    }
+  .custom-link {
+    display: none;
+  }
 
-    /* Afficher le logo burger */
-    .burger-menu {
-      display: block; /* Le logo burger s'affiche sur mobile */
-      position: absolute;
-      right: 5px;
-      top: 10px;
-      z-index: 10;
-    }
-.burger-menu img {
-  height: 60px; /* Assure que les deux logos ont la même hauteur */
-  width: auto;
-  margin: 0; /* Supprimer les marges par défaut */
+  /* Afficher le logo burger */
+  .burger-menu {
+    display: block; /* Le logo burger s'affiche sur mobile */
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    z-index: 10;
+  }
+  .burger-menu img {
+    height: 60px; /* Assure que les deux logos ont la même hauteur */
+    width: auto;
+    margin: 0; /* Supprimer les marges par défaut */
+  }
+  /* Style de la barre latérale visible sur mobile */
+  .side-nav {
+    display: block;
+  }
+
+  .side-nav ul {
+    padding: 50px 20px;
+  }
+
+  .side-nav ul li {
+    margin: 20px 0;
+  }
+
+  .side-nav ul li a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Bouton de fermeture */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  /* Ouverture de la barre */
+  .side-nav.open {
+    width: 250px;
+  }
+
+  p {
+    font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+  }
+  .perso-title {
+    font-size: 30px;
+  }
+
+  .title,
+  .perso-subtitle {
+    font-size: 20px; /* Taille du titre réduite pour les écrans mobiles */
+  }
+
+  .text,
+  .perso-class {
+    font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
+  }
+
+  .logo {
+    width: max-content; /* Largeur du logo réduite pour les écrans mobiles */
+    height: 345px; /* Hauteur du logo réduite pour les écrans mobiles */
+  }
+
+  /*Introduction*/
+  .Introduction {
+    margin-bottom: 50px;
+  }
+
+  /*présentation*/
+  .profile-picture {
+    width: 150px; /* Largeur de l'image réduite pour les écrans mobiles */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+  }
+
+  /*contact + logo */
+
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-right {
+    align-items: center;
+    width: auto;
+  }
+
+  .logo2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    width: max-content;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%; /* largeur des champs formulaire*/
+    padding: 10px;
+  }
+
+  .send-button,
+  .download-button {
+    width: 100px;
+    height: 50px;
+  }
+
+  .footer-contact {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-about,
+  .footer-social,
+  .footer-contact {
+    margin-bottom: 20px;
+  }
+
+  .footer-social img {
+    width: 30px;
+    height: 30px;
+  }
 }
-    /* Style de la barre latérale visible sur mobile */
-    .side-nav {
-      display: block;
-    }
 
-    .side-nav ul {
-      padding: 50px 20px;
-    }
+/*Page Projet*/
+#titre-principale {
+  margin-top: 200px;
+  margin-bottom: 50px; /* Ajoute une marge en bas de 20 pixels */
+}
 
-    .side-nav ul li {
-      margin: 20px 0;
-    }
+.titre-projet {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
 
-    .side-nav ul li a {
-      font-size: 24px;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+/*liens heroku et github*/
+.gold-link {
+  color: gold;
+  text-decoration: none; /* Pour enlever le soulignement par défaut */
+}
 
-    /* Bouton de fermeture */
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 36px;
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-    }
-    /* Ouverture de la barre */
-.side-nav.open {
-  width: 250px;
-   }
+.gold-link:hover {
+  color: darkgoldenrod; /* Couleur lors du survol */
+  text-decoration: underline; /* Ajouter un soulignement lors du survol */
+}
+#Projet1 {
+  border-top: 10px solid #f1c40f;
+  border-left: 20px solid #f1c40f;
+  margin-bottom: 100px;
+  padding: 20px;
+}
 
-    p {
-      font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
-    }
-    .perso-title {
-      font-size: 30px;
-    }
-
-    .title,
-    .perso-subtitle {
-      font-size: 20px; /* Taille du titre réduite pour les écrans mobiles */
-    }
-
-    .text,
-    .perso-class {
-      font-size: 16px; /* Taille du texte réduite pour les écrans mobiles */
-    }
-
-    .logo {
-      width: max-content; /* Largeur du logo réduite pour les écrans mobiles */
-      height: 345px; /* Hauteur du logo réduite pour les écrans mobiles */
-    }
-
-    /*Introduction*/
-    .Introduction {
-      margin-bottom: 50px;
-    }
-
-    /*présentation*/
-    .profile-picture {
-      width: 150px; /* Largeur de l'image réduite pour les écrans mobiles */
-      height: auto; /* Hauteur automatique pour maintenir les proportions */
-    }
-
-    /*contact + logo */
-
-    .contact-box {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .contact-right {
-      align-items: center;
-      width: auto;
-    }
-
-    .logo2 {
-      width: 150px;
-      height: 150px;
-    }
-
-    .form-group {
-      margin-bottom: 10px;
-      width: max-content;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%; /* largeur des champs formulaire*/
-      padding: 10px;
-    }
-
-    .send-button,
-    .download-button {
-      width: 100px;
-      height: 50px;
-    }
-
-    .footer-contact {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .footer-about,
-    .footer-social,
-    .footer-contact {
-      margin-bottom: 20px;
-    }
-
-    .footer-social img {
-      width: 30px;
-      height: 30px;
-    }
+.arcadialogo {
+  width: fit-content;
+  height: 300px;
   }
 
-  /*Page Projet*/
-  #titre-principale {
-    margin-bottom: 50px; /* Ajoute une marge en bas de 20 pixels */
-  }
-
-  .titre-projet {
-    font-family: "Comfortaa", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  #Projet1 {
-    border-top: 10px solid #f1c40f;
-    border-left: 20px solid #f1c40f;
-    margin-bottom: 100px;
-    padding: 20px;
-  }
+.blogAuto,
+.nurse {
+  max-width: 100%; /* Limite la largeur de l'image à 100% de la colonne */
+  height: auto; /* Assure que l'image garde ses proportions */
+  display: block; /* Supprime tout espace blanc ajouté par l'élément img */
+  margin: 0 auto; /* Centre l'image horizontalement si nécessaire */
+}
 
   #Projet3 {
     border-bottom: 10px solid #f1c40f;
