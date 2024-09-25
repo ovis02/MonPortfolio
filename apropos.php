@@ -19,7 +19,7 @@ $removeFooterBg = true; // Variable pour désactiver le background du footer
           <p class="a-propos-description">
             Je suis Mohammad Aowis, développeur web passionné par les technologies modernes. Mon objectif est de créer des expériences numériques immersives et de répondre aux défis de la transformation numérique. Créatif et déterminé, je m'engage à créer des solutions web efficaces et élégantes.
           </p>
-          <a href="cv/Aowis_MOHAMMAD_cv finalisé.pdf" target="_blank" class="futuristic-link">Mon CV</a>
+          <a href="cv/Aowis_MOHAMMAD_cv studi.pdf" target="_blank" class="futuristic-link">Mon CV</a>
         </div>
       </div>
     </div>

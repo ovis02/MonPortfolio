@@ -2,10 +2,10 @@
 session_start();
 
 // Paramètres de connexion à la base de données
-$host = "ltnya0pnki2ck9w8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
-$username = "ufmtrdqqw5rnyyih";
-$password = "s6ovwutglzlers1f";
-$database = "cd9qjh84w06noeth";
+$host = "ryfqldzbliwmq6g5.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+$username = "h8v23xyptizhutwr";
+$password = "xvoomhmiczf4mk30";
+$database = "icjewbuoibg8gufs";
 $port = 3306;
 
 try {
