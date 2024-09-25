@@ -20,7 +20,7 @@
             <?php
 $host = "ryfqldzbliwmq6g5.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
 $username = "h8v23xyptizhutwr";
-$password = "xvoomhmiczf4mk30";
+$password = "o07u65ssxx9gq82b";
 $database = "icjewbuoibg8gufs";
 $port = 3306;
             try {

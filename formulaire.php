@@ -11,10 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-            $host = "ltnya0pnki2ck9w8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
-            $database = "cd9qjh84w06noeth";
-            $username = "ufmtrdqqw5rnyyih";
-            $password = "s6ovwutglzlers1f";
+            $host = "ryfqldzbliwmq6g5.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+            $database = "icjewbuoibg8gufs";
+            $username = "h8v23xyptizhutwr";
+            $password = "o07u65ssxx9gq82b";
             $port = 3306;
 
 
