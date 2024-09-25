@@ -42,7 +42,7 @@
           </li>
         
         <li class="nav-item">
-    <a class="nav-link perso-class text-<?php echo $aProposColor; ?>" href="#">À propos</a>
+    <a class="nav-link perso-class text-<?php echo $aProposColor; ?>" href="apropos.php">À propos</a>
   </li>
   <li class="nav-item">
     <a class="nav-link perso-class text-<?php echo $contactColor; ?>" href="contact.php">Contact</a>

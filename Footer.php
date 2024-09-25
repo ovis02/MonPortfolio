@@ -1,7 +1,7 @@
 
     
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" <?php if (isset($removeFooterBg) && $removeFooterBg) { echo 'style="background: none;"'; } ?>>
   <div class="container">
     <!-- Section principale du footer -->
     <div class="footer-content row d-flex justify-content-between align-items-center">

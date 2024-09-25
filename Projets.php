@@ -4,9 +4,11 @@ $projetsColor = "white";
 $aProposColor = "warning";
 $contactColor = "warning";
 include 'header.php';
+$removeFooterBg = true; // Variable pour désactiver le background du footer
 ?>
 
 <canvas id="canvas"> </canvas>
+<div class="background"></div>
 <!------------------------------Projets------------------------------>
     <!--titre principal des projet-->
     <div class="container text-center mb-3">

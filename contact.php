@@ -10,10 +10,10 @@ include 'header.php';
 <!--Contact-->
     <section class="Contact">
       <div class="container">
-        <h2 class="title">Contact</h2>
+        <h2 class="title-form">Contact</h2>
         <div class="contact-box">
           <div class="contact-left">
-            <img src="images/monLogo.png" alt="Votre Logo" class="logo2" />
+            <img src="images/logo.png" alt="Votre Logo" class="logo2" />
           </div>
           <div class="contact-right">
             <form id="myForm" method="POST" action="formulaire.php">
@@ -42,14 +42,7 @@ include 'header.php';
             </form>
           </div>
         </div>
-  
-        <div class="button-container">
-                    <p class="text">Télécharger mon CV</p>
-                     <a href="cv/Aowis_MOHAMMAD_cv finalisé.pdf">
-          <button class="download-button">Télécharger</button>
-          </a>
-        </div>
-         <div id="confirmation"></div>
+           <div id="confirmation"></div>
       </div>
     </section>
       <?php include 'Footer.php'; ?>
