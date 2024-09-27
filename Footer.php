@@ -7,7 +7,7 @@
     <div class="footer-content row d-flex justify-content-between align-items-center">
       <!-- Section à propos -->
       <div class="col-md-4 footer-about">
-        <h3>À propos de moi</h3>
+        <h3><a href="apropos.php">À propos de moi</a></h3>
         <p>
           Développeur passionné par la création d'expériences web modernes et performantes. Mon portfolio reflète mon expertise dans le design et le développement front-end.
         </p>

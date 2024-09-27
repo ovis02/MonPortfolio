@@ -28,17 +28,23 @@ $(document).ready(function () {
 //Formulaire administrateur
 
 $(document).ready(function () {
+  // Gestion du clic sur le bouton admin pour afficher/masquer le formulaire
   $(".admin").on("click", function (event) {
     event.preventDefault();
-
     if ($(".login-form").css("display") === "block") {
-      $(".login-form").css("display", "none"); // Cache le formulaire s'il est déjà affiché
+      $(".login-form").css("display", "none");
     } else {
-      $(".login-form").css("display", "block"); // Affiche le formulaire s'il est caché
+      $(".login-form").css("display", "block");
     }
+  });
+
+  // Gestion du clic sur le bouton "Fermer" pour masquer le formulaire
+  $(".close-btn").on("click", function () {
+    $(".login-form").css("display", "none");
   });
 });
 
+//burger navigation
 document.getElementById("burger-menu").addEventListener("click", function () {
   document.getElementById("side-nav").classList.add("open");
 });

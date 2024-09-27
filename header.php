@@ -28,6 +28,7 @@
          
         <div class="login-form">
           <form action="login.php" method="POST">
+            <button type="button" class="close-btn">X</button>
             <input type="text" name="username" placeholder="Nom d'utilisateur">
             <input type="password" name="password" placeholder="Mot de passe">
             <button type="submit">Se connecter</button>
