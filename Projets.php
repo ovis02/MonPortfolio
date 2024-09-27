@@ -105,7 +105,7 @@ $removeFooterBg = true; // Variable pour désactiver le background du footer
           </p>
           <p>
             <h3 class="titre-projet">Lien Heroku :</h3>
-            <a href="https://arcazoo-40aeb8b73b17.herokuapp.com/" target="_blank" class="gold-link">Voir le projet en ligne</a>
+            <a href="https://blogauto-1ceaa6d40264.herokuapp.com/" target="_blank" class="gold-link">Voir le projet en ligne</a>
           </p>
         </div>
       </div>
